@@ -1,0 +1,48 @@
+Problem 1
+_________
+
+Get hours
+
+Get ratePerHour
+
+weekly = (ratePerHour * hours) * 7
+
+annual = weekly * 52
+
+monthly = annual / 12
+
+Display weekly, monthly, annual
+
+
+Problem 6
+_________
+
+Get length
+
+Get width
+
+Get height
+
+Get gallonPrice
+
+Get squareFeet
+
+totalArea = ((length * height) * 2) + ((width * height) * 2)
+
+numberOfGallons = totalArea / squareFeet
+
+totalPrice = gallonPrice * numberOfGallons
+
+Display numberOfGallons, totalPrice
+
+
+Problem 7
+_________
+
+Get name
+
+Get age
+
+dogAge = age * 7
+
+Display (name) is (dogAge) in dog years
