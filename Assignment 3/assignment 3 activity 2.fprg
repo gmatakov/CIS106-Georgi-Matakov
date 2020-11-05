@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="georg_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-04 08:02:16 PM"/>
+        <attribute name="created" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTA0OzA2OjUzOjI0IFBNOzI0OTA="/>
+        <attribute name="edited" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTA0OzA4OjAyOjE2IFBNOzE7MjU5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="area" type="Real" array="False" size=""/>
+            <declare name="perimeter" type="Real" array="False" size=""/>
+            <declare name="length" type="Real" array="False" size=""/>
+            <declare name="width" type="Real" array="False" size=""/>
+            <assign variable="length" expression="GetLength()"/>
+            <assign variable="width" expression="GetWidth()"/>
+            <assign variable="area" expression="GetArea(length, width)"/>
+            <assign variable="perimeter" expression="GetPerimeter(length, width)"/>
+            <call expression="DisplayRectangle(area, perimeter)"/>
+        </body>
+    </function>
+    <function name="DisplayRectangle" type="None" variable="">
+        <parameters>
+            <parameter name="area" type="Real" array="False"/>
+            <parameter name="perimeter" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The perimeter is &quot; &amp; perimeter &amp; &quot; and the area is &quot; &amp; area" newline="True"/>
+        </body>
+    </function>
+    <function name="GetArea" type="Real" variable="area">
+        <parameters>
+            <parameter name="length" type="Real" array="False"/>
+            <parameter name="width" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="area" type="Real" array="False" size=""/>
+            <assign variable="area" expression="length * width"/>
+        </body>
+    </function>
+    <function name="GetLength" type="Integer" variable="length">
+        <parameters/>
+        <body>
+            <declare name="length" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the length of your rectangle?&quot;" newline="True"/>
+            <input variable="length"/>
+        </body>
+    </function>
+    <function name="GetPerimeter" type="Real" variable="perimeter">
+        <parameters>
+            <parameter name="length" type="Real" array="False"/>
+            <parameter name="width" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="perimeter" type="Real" array="False" size=""/>
+            <assign variable="perimeter" expression="(length * 2) + (width * 2)"/>
+        </body>
+    </function>
+    <function name="GetWidth" type="Real" variable="width">
+        <parameters/>
+        <body>
+            <declare name="width" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the width of your rectangle?&quot;" newline="True"/>
+            <input variable="width"/>
+        </body>
+    </function>
+</flowgorithm>
