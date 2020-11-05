@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="georg_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-04 08:29:27 PM"/>
+        <attribute name="created" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTA0OzA4OjA0OjE4IFBNOzI0OTE="/>
+        <attribute name="edited" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTA0OzA4OjI5OjI3IFBNOzE7MjYwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="itemQuantity" type="Integer" array="False" size=""/>
+            <declare name="pricePerItem" type="Real" array="False" size=""/>
+            <declare name="priceOfItems" type="Real" array="False" size=""/>
+            <declare name="salesTax" type="Real" array="False" size=""/>
+            <declare name="totalPrice" type="Real" array="False" size=""/>
+            <assign variable="itemQuantity" expression="GetItemQuantity()"/>
+            <assign variable="pricePerItem" expression="GetPricePerItem()"/>
+            <assign variable="priceOfItems" expression="CalculatePriceOfItems(itemQuantity, pricePerItem)"/>
+            <assign variable="salesTax" expression="CalculateSalesTax(priceOfItems)"/>
+            <assign variable="totalPrice" expression="CalculateTotalPrice(priceOfItems, salesTax)"/>
+            <call expression="DisplayCalculation(itemQuantity, pricePerItem, priceOfItems, salesTax, totalPrice)"/>
+        </body>
+    </function>
+    <function name="CalculatePriceOfItems" type="Real" variable="priceOfItems">
+        <parameters>
+            <parameter name="itemQuantity" type="Integer" array="False"/>
+            <parameter name="pricePerItem" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="priceOfItems" type="Real" array="False" size=""/>
+            <assign variable="priceOfItems" expression="itemQuantity * pricePerItem"/>
+        </body>
+    </function>
+    <function name="CalculateSalesTax" type="Real" variable="salesTax">
+        <parameters>
+            <parameter name="priceOfItems" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="salesTax" type="Real" array="False" size=""/>
+            <assign variable="salesTax" expression="priceOfItems * 0.07"/>
+        </body>
+    </function>
+    <function name="CalculateTotalPrice" type="Real" variable="totalPrice">
+        <parameters>
+            <parameter name="priceOfItems" type="Real" array="False"/>
+            <parameter name="salesTax" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalPrice" type="Real" array="False" size=""/>
+            <assign variable="totalPrice" expression="priceOfItems + salesTax"/>
+        </body>
+    </function>
+    <function name="DisplayCalculation" type="None" variable="">
+        <parameters>
+            <parameter name="itemQuantity" type="Integer" array="False"/>
+            <parameter name="pricePerItem" type="Real" array="False"/>
+            <parameter name="priceOfItems" type="Real" array="False"/>
+            <parameter name="salesTax" type="Real" array="False"/>
+            <parameter name="totalPrice" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The quantity of items is &quot; &amp; itemQuantity" newline="True"/>
+            <output expression="&quot;The price per items is &quot; &amp; pricePerItem" newline="True"/>
+            <output expression="&quot;The price of all items is &quot; &amp; priceOfItems" newline="True"/>
+            <output expression="&quot;The sales tax is &quot; &amp; salesTax" newline="True"/>
+            <output expression="&quot;The total price is &quot; &amp; totalPrice" newline="True"/>
+        </body>
+    </function>
+    <function name="GetItemQuantity" type="Integer" variable="itemQuantity">
+        <parameters/>
+        <body>
+            <declare name="itemQuantity" type="Integer" array="False" size=""/>
+            <output expression="&quot;Quantity of items?&quot;" newline="True"/>
+            <input variable="itemQuantity"/>
+        </body>
+    </function>
+    <function name="GetPricePerItem" type="Real" variable="pricePerItem">
+        <parameters/>
+        <body>
+            <declare name="pricePerItem" type="Real" array="False" size=""/>
+            <output expression="&quot;Price per item?&quot;" newline="True"/>
+            <input variable="pricePerItem"/>
+        </body>
+    </function>
+</flowgorithm>
