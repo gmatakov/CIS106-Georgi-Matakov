@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="georg_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-10 04:14:50 PM"/>
+        <attribute name="created" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTEwOzAzOjQ5OjMwIFBNOzI0ODY="/>
+        <attribute name="edited" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTEwOzA0OjE0OjUwIFBNOzE7MjU4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ticketAmount" type="Integer" array="False" size=""/>
+            <declare name="pricePerSeat" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter amount of tickets = &quot;" newline="True"/>
+            <input variable="ticketAmount"/>
+            <output expression="&quot;Please enter price per seat = &quot;" newline="True"/>
+            <input variable="pricePerSeat"/>
+            <call expression="calculation(ticketAmount, pricePerSeat)"/>
+            <output expression="calculation(ticketAmount, pricePerSeat)" newline="True"/>
+        </body>
+    </function>
+    <function name="calculation" type="String" variable="numbers">
+        <parameters>
+            <parameter name="ticketAmount" type="Integer" array="False"/>
+            <parameter name="pricePerSeat" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="numbers" type="String" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="ticketAmount * pricePerSeat"/>
+            <assign variable="tax" expression="cost * 0.07"/>
+            <assign variable="total" expression="cost + tax"/>
+            <assign variable="numbers" expression="str(cost) + &quot; &quot; + str(tax) + &quot; &quot; + str(total)"/>
+        </body>
+    </function>
+</flowgorithm>

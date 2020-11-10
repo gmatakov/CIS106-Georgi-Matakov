@@ -1,0 +1,15 @@
+def calculation(ticketAmount, pricePerSeat):
+    cost = ticketAmount * pricePerSeat
+    tax = cost * 0.07
+    total = cost + tax
+    numbers = str(cost) + " " + str(tax) + " " + str(total)
+    
+    return numbers
+
+# Main
+print("Please enter amount of tickets = ")
+ticketAmount = int(input())
+print("Please enter price per seat = ")
+pricePerSeat = float(input())
+calculation(ticketAmount, pricePerSeat)
+print(calculation(ticketAmount, pricePerSeat))

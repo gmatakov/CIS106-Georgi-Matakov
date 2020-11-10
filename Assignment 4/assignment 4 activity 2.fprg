@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="georg_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-10 03:47:07 PM"/>
+        <attribute name="created" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTEwOzAzOjA5OjM0IFBNOzI0ODY="/>
+        <attribute name="edited" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTEwOzAzOjQ3OjA3IFBNOzE7MjU5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="score1" type="Real" array="False" size=""/>
+            <declare name="score2" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter last name = &quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Please enter first score = &quot;" newline="True"/>
+            <input variable="score1"/>
+            <output expression="&quot;Please enter second score = &quot;" newline="True"/>
+            <input variable="score2"/>
+            <call expression="calculation(score1, score2)"/>
+            <output expression="lastName" newline="True"/>
+            <output expression="score1" newline="True"/>
+            <output expression="score2" newline="True"/>
+            <output expression="calculation(score1, score2)" newline="True"/>
+        </body>
+    </function>
+    <function name="calculation" type="Real" variable="total">
+        <parameters>
+            <parameter name="score1" type="Real" array="False"/>
+            <parameter name="score2" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="(score1 * 0.4) + (score2 * 0.6)"/>
+        </body>
+    </function>
+</flowgorithm>
