@@ -1,0 +1,37 @@
+def computation(hours):
+
+    if float(hours) > 40:
+
+        overtime = float(hours) - 40
+
+    else:
+
+        overtime = 0
+
+
+    
+return overtime
+
+
+
+lastName = str(input("Enter last name = "))
+
+hours = input("Enter total amount of hours = ")
+
+ratePerHour = input("Enter hourly rate = ")
+
+
+
+overtime = computation(hours)
+
+grossPay = float(hours) * float(ratePerHour) + float(overtime) * (float(ratePerHour) * 1.5)
+
+
+
+print("Last name = " + lastName)
+
+print("Hours = ", hours)
+
+print("Rate per hour = $", ratePerHour)
+
+print("Gross pay = $", grossPay)

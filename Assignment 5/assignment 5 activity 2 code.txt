@@ -1,0 +1,33 @@
+def getUnitPrice(widget):
+    
+	if widget == "A" :
+        
+		unitPrice = 10
+    
+	else:
+        
+		unitPrice = 20
+        
+    
+	
+	return(unitPrice)
+    
+
+
+widget = input("Enter widget = ")
+
+quantity = input("Enter quantity = ")
+
+
+
+unitPrice = getUnitPrice(widget)
+
+
+
+extendedPrice = float(quantity) * float(unitPrice)
+
+
+
+print("Unit price = $", unitPrice)
+
+print("Extended price = $", extendedPrice)

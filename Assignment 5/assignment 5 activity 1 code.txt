@@ -1,0 +1,23 @@
+def computeExtendedPrice(quantity, unitPrice):
+    extendedPrice = quantity * unitPrice
+    
+    return extendedPrice
+
+# Main
+print("Enter quantity ordered = ")
+quantity = int(input())
+print("Enter unit price = ")
+unitPrice = float(input())
+extendedPrice = computeExtendedPrice(quantity, unitPrice)
+tax = extendedPrice * 0.07
+if extendedPrice > 100:
+    shipping = 0
+else:
+    shipping = extendedPrice * 0.1
+total = extendedPrice + shipping + tax
+print("Quantity ordered: " + str(quantity))
+print("Unit price: $" + str(unitPrice))
+print("Extended price: $" + str(extendedPrice))
+print("Tax: $" + str(tax))
+print("Shipping: $" + str(shipping))
+print("Total order: $" + str(total))
