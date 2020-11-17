@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="georg_000"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-16 08:50:38 PM"/>
+        <attribute name="created" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTE2OzA4OjMzOjM1IFBNOzI0OTU="/>
+        <attribute name="edited" value="Z2VvcmdfMDAwO0dFT1JHSTsyMDIwLTExLTE2OzA4OjUwOjM4IFBNOzE7MjYwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="yearsOfService" type="Real" array="False" size=""/>
+            <declare name="awardAmount" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter years of service = &quot;" newline="True"/>
+            <input variable="yearsOfService"/>
+            <assign variable="awardAmount" expression="determineAward(yearsOfService)"/>
+            <output expression="&quot;Award amount = $&quot; &amp; awardAmount" newline="True"/>
+        </body>
+    </function>
+    <function name="determineAward" type="Real" variable="awardAmount">
+        <parameters>
+            <parameter name="yearsOfService" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="awardAmount" type="Real" array="False" size=""/>
+            <if expression="yearsOfService &gt; 10">
+                <then>
+                    <assign variable="awardAmount" expression="1000"/>
+                </then>
+                <else>
+                    <if expression="yearsOfService &gt;= 5">
+                        <then>
+                            <assign variable="awardAmount" expression="500"/>
+                        </then>
+                        <else>
+                            <assign variable="awardAmount" expression="100"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

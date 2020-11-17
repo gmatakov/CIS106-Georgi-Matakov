@@ -1,0 +1,20 @@
+def determinePrice(quantity):
+    if quantity > 1000:
+        price = 8.0
+    else:
+        if quantity >= 500:
+            price = 10.0
+        else:
+            price = 12.0
+    
+    return price
+
+# Main
+print("Enter quantity of items = ")
+quantity = int(input())
+price = determinePrice(quantity)
+unitPrice = determinePrice(quantity)
+extendedPrice = price * quantity
+print("Quantity ordered = " + str(quantity))
+print("Unit price = $" + str(unitPrice))
+print("Total price = $" + str(extendedPrice))

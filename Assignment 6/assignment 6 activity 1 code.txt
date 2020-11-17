@@ -1,0 +1,16 @@
+def determineAward(yearsOfService):
+    if yearsOfService > 10:
+        awardAmount = 1000
+    else:
+        if yearsOfService >= 5:
+            awardAmount = 500
+        else:
+            awardAmount = 100
+    
+    return awardAmount
+
+# Main
+print("Enter years of service = ")
+yearsOfService = float(input())
+awardAmount = determineAward(yearsOfService)
+print("Award amount = $" + str(awardAmount))

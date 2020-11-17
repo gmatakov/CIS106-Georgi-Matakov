@@ -1,0 +1,30 @@
+def determineBonus(jobCode, yearsOfService):
+    if jobCode == "A":
+        if yearsOfService > 10:
+            bonus = 10000
+        else:
+            if yearsOfService >= 5:
+                bonus = 8000
+            else:
+                bonus = 5000
+    else:
+        if jobCode == "B":
+            if yearsOfService > 15:
+                bonus = 9000
+            else:
+                bonus = 5000
+        else:
+            bonus = 5000
+    
+    return bonus
+
+# Main
+print("Enter last name = ")
+lastName = input()
+print("Enter job code = ")
+jobCode = input()
+print("Enter years of service =")
+yearsOfService = int(input())
+bonus = determineBonus(jobCode, yearsOfService)
+print("Last name = " + lastName)
+print("Bonus = $" + str(bonus))
