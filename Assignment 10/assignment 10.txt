@@ -1,0 +1,35 @@
+values = []
+
+value = 0
+
+for i in range(0, 2):
+
+    print("Enter value " + str(i + 1) + ":")
+
+    value = input()
+
+    values.append(value)
+
+for i in range(0, 2):
+
+    print(values[i])
+
+for i in range(2, 5):
+
+    print("Enter value " + str(i + 1) + ":")
+
+    value = input()
+
+    values.append(value)
+
+for i in range(0, 5):
+
+    print(values[i])
+
+del values[-2]
+
+print("Removed value 4")
+
+for i in range(0, len(values)):
+
+    print(values[i])
